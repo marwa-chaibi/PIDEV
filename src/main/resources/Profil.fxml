@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #f0f8ff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ProfilController">
+    <children>
+        <!-- Label pour l'Email -->
+        <Label layoutX="50.0" layoutY="70.0" style="-fx-font-size: 14px; -fx-font-weight: bold;" text="Email:" />
+        <TextField fx:id="emailField" layoutX="142.0" layoutY="60.0" prefWidth="300.0" style="-fx-font-size: 14px; -fx-padding: 10px; -fx-border-color: #B0BEC5; -fx-border-radius: 5px; -fx-effect: dropshadow(gaussian, #000000, 5, 0, 0, 2);" />
+
+        <!-- Label pour le Numéro de téléphone -->
+        <Label layoutY="157.0" style="-fx-font-size: 14px; -fx-font-weight: bold;" text="Numéro de téléphone:" />
+        <TextField fx:id="numTelField" layoutX="166.0" layoutY="137.0" prefWidth="300.0" style="-fx-font-size: 14px; -fx-padding: 10px; -fx-border-color: #B0BEC5; -fx-border-radius: 5px; -fx-effect: dropshadow(gaussian, #000000, 5, 0, 0, 2);" />
+
+        <!-- Label pour l'Adresse -->
+        <Label layoutX="50.0" layoutY="210.0" style="-fx-font-size: 14px; -fx-font-weight: bold;" text="Adresse:" />
+        <TextField fx:id="adresseField" layoutX="156.0" layoutY="180.0" prefWidth="300.0" style="-fx-font-size: 14px; -fx-padding: 10px; -fx-border-color: #B0BEC5; -fx-border-radius: 5px; -fx-effect: dropshadow(gaussian, #000000, 5, 0, 0, 2);" />
+
+        <!-- Bouton Enregistrer -->
+        <Button fx:id="saveButton" layoutX="148.0" layoutY="259.0" onAction="#handleSaveButtonClick" style="-fx-background-color: #87CEEB; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 10px 20px; -fx-border-radius: 5px; -fx-effect: dropshadow(gaussian, #000000, 5, 0, 0, 2);" text="Enregistrer" />
+
+        <!-- Bouton Modifier -->
+        <Button fx:id="editButton" layoutX="330.0" layoutY="259.0" onAction="#handleEditButtonClick" style="-fx-background-color: #87CEEB; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 10px 20px; -fx-border-radius: 5px; -fx-effect: dropshadow(gaussian, #000000, 5, 0, 0, 2);" text="Modifier" />
+    </children>
+</AnchorPane>

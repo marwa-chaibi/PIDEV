@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefWidth="600.0" prefHeight="400.0" xmlns:fx="http://javafx.com/fxml" fx:controller="Controller.HomeController">
+    <VBox spacing="20.0" alignment="CENTER" prefWidth="580.0" layoutX="10.0" layoutY="10.0">
+        <Label text="Bienvenue à Sahtek-Event!" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #4CAF50;"/>
+        <Label text="Nous sommes ravis de vous accueillir !" style="-fx-font-size: 16px; -fx-text-fill: #555555;"/>
+
+        <!-- Bouton pour la page Profil -->
+        <Button fx:id="navigateProfileButton" text="Aller à la page Profil" onAction="#handleProfileButtonClick"
+                style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-padding: 10px 20px; -fx-font-size: 14px; -fx-border-radius: 5px;"/>
+
+        <!-- Bouton pour le Dashboard Utilisateurs -->
+        <Button fx:id="navigateDashboardButton" text="Aller au Dashboard Utilisateurs" onAction="#handleDashboardButtonClick"
+                style="-fx-background-color: #FF9800; -fx-text-fill: white; -fx-padding: 10px 20px; -fx-font-size: 14px; -fx-border-radius: 5px;"/>
+    </VBox>
+</AnchorPane>

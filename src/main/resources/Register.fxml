@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.Label?>
+
+<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.RegisterController">
+    <children>
+        <!-- Champ Prénom -->
+        <TextField fx:id="firstNameTextField" layoutX="115.0" layoutY="79.0" prefWidth="370.0" promptText="Prénom" />
+
+        <!-- Champ Nom -->
+        <TextField fx:id="lastNameTextField" layoutX="115.0" layoutY="126.0" prefWidth="370.0" promptText="Nom" />
+
+        <!-- Champ Email -->
+        <TextField fx:id="emailTextField" layoutX="115.0" layoutY="173.0" prefWidth="370.0" promptText="Email" />
+
+        <!-- Champ Mot de passe -->
+        <PasswordField fx:id="passwordField" layoutX="115.0" layoutY="220.0" prefWidth="370.0" promptText="Mot de passe" />
+
+        <!-- Champ Nationalité (Texte libre) -->
+        <TextField fx:id="nationalityTextField" layoutX="115.0" layoutY="267.0" prefWidth="370.0" promptText="Nationalité" />
+
+        <!-- ComboBox Genre (simple liste de String) -->
+        <ComboBox fx:id="genderComboBox" layoutX="115.0" layoutY="314.0" prefWidth="370.0" promptText="Genre"/>
+
+        <!-- Bouton d'inscription -->
+        <Button fx:id="registerButton" layoutX="230.0" layoutY="370.0" mnemonicParsing="false" text="S'inscrire" onAction="#handleRegister" />
+
+        <!-- Titre -->
+        <Text layoutX="220.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Page d'inscription">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Text>
+
+        <!-- Message de statut -->
+        <Label fx:id="actionTarget" layoutX="115.0" layoutY="420.0" prefWidth="370.0"/>
+    </children>
+</AnchorPane>
