@@ -29,7 +29,14 @@ public class DashboardService {
              ResultSet rs = stmt.executeQuery(query)) {
 
             while (rs.next()) {
-                GENRE genre = GENRE.valueOf(rs.getString("genre").toUpperCase());
+                String genreStr = rs.getString("genre");
+                GENRE genre;
+
+                try {
+                    genre = GENRE.valueOf(genreStr.toUpperCase());
+                } catch (IllegalArgumentException | NullPointerException e) {
+                    genre = GENRE.HOMME; // Valeur par défaut en cas d'erreur
+                }
 
                 String role = rs.getString("role");
                 if (role == null || role.trim().isEmpty()) {
@@ -42,7 +49,7 @@ public class DashboardService {
                         rs.getString("email"),
                         rs.getString("mot_de_passe"),
                         rs.getString("nationalite"),
-                        rs.getString("genre"),
+                        genre.name(), // Utilisation de l'énumération corrigée
                         role
                 );
                 utilisateur.setId(rs.getInt("id"));

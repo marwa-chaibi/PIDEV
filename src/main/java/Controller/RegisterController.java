@@ -15,9 +15,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.ButtonType;
 import tools.DataBase;
+import org.mindrot.jbcrypt.BCrypt; // Importation de BCrypt
 
 import java.sql.SQLException;
-
+// code maarwa
 public class RegisterController {
 
     @FXML
@@ -70,8 +71,11 @@ public class RegisterController {
                 return;
             }
 
+            // Hasher le mot de passe avec BCrypt
+            String hashedPassword = BCrypt.hashpw(password, BCrypt.gensalt());
+
             // Créer un objet Utilisateur avec les données saisies
-            Utilisateur utilisateur = new Utilisateur(firstName, lastName, email, password, nationality, genderStr);
+            Utilisateur utilisateur = new Utilisateur(firstName, lastName, email, hashedPassword, nationality, genderStr);
 
             // Ajouter l'utilisateur à la base de données
             if (registerUser(utilisateur)) {
@@ -103,7 +107,7 @@ public class RegisterController {
                 stmt.setString(1, utilisateur.getNom());
                 stmt.setString(2, utilisateur.getPrenom());
                 stmt.setString(3, utilisateur.getEmail());
-                stmt.setString(4, utilisateur.getMotDePasse()); // Le mot de passe en clair
+                stmt.setString(4, utilisateur.getMotDePasse()); // Le mot de passe est déjà hashé
                 stmt.setString(5, utilisateur.getNationalite());
                 stmt.setString(6, utilisateur.getGenre().toString()); // Le genre en tant que chaîne
 

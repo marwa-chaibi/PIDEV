@@ -27,7 +27,6 @@
 
         <!-- ComboBox pour choisir le rôle -->
 
-
         <!-- Boutons d'action -->
         <Button layoutX="150.0" layoutY="380.0" mnemonicParsing="false" text="Modifier" style="-fx-background-color: #5dade2; -fx-text-fill: white; -fx-font-size: 14;" onAction="#handleEditButtonClick"/>
         <Button layoutX="250.0" layoutY="380.0" mnemonicParsing="false" text="Supprimer" style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-font-size: 14;" onAction="#handleDeleteButtonClick"/>

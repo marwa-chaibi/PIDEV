@@ -50,7 +50,7 @@ public class DashboardController {
         nomColumn.setCellValueFactory(new PropertyValueFactory<>("nom"));
         prenomColumn.setCellValueFactory(new PropertyValueFactory<>("prenom"));
         emailColumn.setCellValueFactory(new PropertyValueFactory<>("email"));
-        motDePasseColumn.setCellValueFactory(new PropertyValueFactory<>("motDePasse"));
+
         nationaliteColumn.setCellValueFactory(new PropertyValueFactory<>("nationalite"));
         genreColumn.setCellValueFactory(new PropertyValueFactory<>("genre"));
         roleColumn.setCellValueFactory(new PropertyValueFactory<>("role"));

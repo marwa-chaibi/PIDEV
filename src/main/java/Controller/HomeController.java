@@ -7,7 +7,6 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 
 public class HomeController {
@@ -15,6 +14,7 @@ public class HomeController {
     // Méthode pour la page Profil
     @FXML
     private void handleProfileButtonClick(ActionEvent event) {
+        System.out.println("Clic sur le bouton Profil !"); // Vérification du clic
         try {
             // Charger la page Profil
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/profile.fxml"));
@@ -34,7 +34,11 @@ public class HomeController {
     // Méthode pour le Dashboard Utilisateurs
     @FXML
     private void handleDashboardButtonClick(ActionEvent event) {
+        System.out.println("Clic sur le bouton Dashboard Utilisateurs !"); // Vérification du clic
         try {
+            // Vérifie si l'événement est correctement reçu
+            System.out.println("Événement reçu : " + event.getSource().getClass().getName());
+
             // Charger la page Dashboard
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/Dashboard.fxml"));
             Parent root = loader.load();
